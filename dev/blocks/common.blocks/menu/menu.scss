@@ -5,7 +5,7 @@
   &__logo {
     position: relative;
     left: 9.6%;
-    top: 0.96rem;
+    padding: 15px 0 15px 0;
 
     font-family: 'Montserrat';
     text-transform: uppercase;
@@ -21,4 +21,18 @@
       color: $blue;
     }
   }
+
+  &__categories {
+    padding-top: 20px;
+    width: 23%;
+
+    font-family: 'PT Root UI Light';
+    text-transform: uppercase;
+    font-size: 14px;
+
+    a {
+      margin: 0 12px 0 12px;
+    }
+  }
+
 }
