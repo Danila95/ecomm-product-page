@@ -110,7 +110,6 @@ module.exports = (env) => {
 	  mode: 'development',
 	  entry: {
 		main: ['@babel/polyfill', './main.js'],
-		analytics: '@common/analytics.js'
 	  },
 	  output: {
 		filename: filename('js'),
@@ -127,7 +126,6 @@ module.exports = (env) => {
 	  optimization: optimization(),
 	  devServer: {
 		port: 8080,
-		hot: isDev
 	  },
 	  devtool: isDev ? 'source-map' : '',
 	  plugins: plugins(),
