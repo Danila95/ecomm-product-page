@@ -72,6 +72,11 @@ const plugins = () => {
 			from: path.resolve(__dirname, 'dev/favicon.ico'),
 			to: path.resolve(__dirname, 'prod')
 		},
+        {
+            //копирует папку img
+            from: path.resolve(__dirname, 'dev/img/'),
+            to: path.resolve(__dirname, 'prod/img/')
+        },
 	]),
 	new MiniCssExtractPlugin({
 		filename: filename('css')

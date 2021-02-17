@@ -5,7 +5,7 @@
   &__logo {
     position: relative;
     left: 9.6%;
-    padding: 15px 0 15px 0;
+    margin: 15px 0 15px 0;
 
     font-family: 'Montserrat';
     text-transform: uppercase;
@@ -22,17 +22,29 @@
     }
   }
 
-  &__categories {
-    padding-top: 20px;
-    width: 23%;
+  &__navigation {
+    margin-top: 20px;
+    width: 18%;
 
     font-family: 'PT Root UI Light';
     text-transform: uppercase;
     font-size: 14px;
 
     a {
-      margin: 0 12px 0 12px;
+      margin: 8px 12px 8px 12px;
+      text-decoration: none;
+      color: $black;
     }
   }
 
+  &__buttons {
+    display: flex;
+    position: relative;
+    right: 3%;
+    width: 8%;
+
+    img:nth-child(even) {
+      margin: 0 16px 0 16px;
+    }
+  }
 }
