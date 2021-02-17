@@ -1,0 +1,23 @@
+.breadcrumb {
+  width: 100%;
+  background: $grey;
+
+  font-family: 'PT Root UI Light';
+  font-size: 12px;
+  line-height: 16px;
+  &__navigation {
+    padding: 7px 0 7px 0;
+    color: $grey-2;
+
+    position: relative;
+    width: 200px;
+    height: 16px;
+    left: 130px;
+    top: 2px;
+
+    a {
+      text-decoration: none;
+      color: $grey-2;
+    }
+  }
+}
