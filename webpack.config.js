@@ -1,13 +1,12 @@
-const path = require('path')
+const path = require('path');
 const os = require('os');
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DashboardPlugin = require("webpack-dashboard/plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 
@@ -21,7 +20,7 @@ const optimization = () => {
 		splitChunks: {
 		chunks: 'all'
 	}
-  }
+  };
   if (isProd) {
 	config.minimizer = [
 		new OptimizeCssAssetWebpackPlugin(),
@@ -29,7 +28,7 @@ const optimization = () => {
 	]
   }
   return config
-}
+};
 
 const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
@@ -43,14 +42,14 @@ const cssLoaders = extra => {
 			},
 		},
 		'css-loader'
-	]
+	];
 
 	if (extra) {
 		loaders.push(extra); 
 	}
 
 	return loaders;
-}
+};
 
 const plugins = () => {
 	const base = [
@@ -81,14 +80,9 @@ const plugins = () => {
 	isProd ? new ImageminPlugin({
 		test: /\.(png|jpe?g|gif|ico|svg)$/i
 	}):() => {},
-  ]
-  //при сбоорке на продакш запускает сервер BundleAnalyzerPlugin
-  if (isProd) {
-	base.push( new BundleAnalyzerPlugin())
-  }
-
+  ];
   return base;
-}
+};
 
 module.exports = (env) => {
 	const isProp = env === 'prop';
@@ -185,14 +179,6 @@ module.exports = (env) => {
 			]
 		  },
 		  {
-			test: /\.xml$/,
-			use: ['xml-loader']
-		  },
-		  {
-			test: /\.csv$/,
-			use: ['csv-loader']
-		  },
-		  {
 			test: /\.js$/,
 			exclude: /node_modules/,
 			loader: 'babel-loader',
@@ -205,4 +191,4 @@ module.exports = (env) => {
 		]
 	  }
   };
- }
+ };
