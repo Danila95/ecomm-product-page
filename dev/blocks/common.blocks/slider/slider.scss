@@ -1,0 +1,54 @@
+.slider {
+  display: flex;
+
+  &__other-img {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    margin-right: 3.7%;
+
+    img {
+      margin-bottom: 20px;
+    }
+    img:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__carusel {
+    img {
+      width: 480px;
+      height: 600px;
+    }
+    .nav {
+      button.prev {
+          position: absolute;
+          background: url(./img/icons/arrow_left.svg) center/contain no-repeat;
+          top: 69%;
+          left: 18%;
+          width: 30px;
+          height: 30px;
+          z-index: 1;
+      }
+      button.next {
+        position: absolute;
+        background: url(./img/icons/arrow_right.svg) center/contain no-repeat;
+        top: 69%;
+        left: 49%;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+      }
+      button.increase {
+        position: absolute;
+        background: url(./img/icons/increase.svg) center/contain no-repeat;
+        top: 25%;
+        left: 49%;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+      }
+    }
+  }
+
+}
