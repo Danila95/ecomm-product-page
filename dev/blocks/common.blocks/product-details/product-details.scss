@@ -1,0 +1,43 @@
+.product-details {
+  margin-left: 20px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'PT Root UI Light';
+  font-size: 14px;
+  line-height: 20px;
+
+  &__id {
+    margin-bottom: 5px;
+    span {
+      color: $grey-2;
+    }
+    span.SKU {
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+
+  &__aviability {
+    text-transform: none;
+    span {
+      color: $grey-2;
+    }
+  }
+  &__name-product {
+    margin-top: 28px;
+    h1 {
+      font-family: 'PT Root UI Bold';
+      margin: 0;
+    }
+  }
+  &__price {
+    margin-top: 20px;
+    h1 {
+      font-family: 'PT Root UI Bold';
+      color: $blue;
+      margin: 0;
+    }
+  }
+}
