@@ -25,6 +25,7 @@
       color: $grey-2;
     }
   }
+
   &__name-product {
     margin-top: 28px;
     h1 {
@@ -32,12 +33,84 @@
       margin: 0;
     }
   }
+
   &__price {
     margin-top: 20px;
     h1 {
       font-family: 'PT Root UI Bold';
       color: $blue;
       margin: 0;
+    }
+  }
+
+  &__tax {
+    margin-top: 10px;
+  }
+
+  &__color {
+    margin-top: 30px;
+    span {
+      font-family: 'PT Root UI Bold';
+      color: $blue;
+    }
+    span.COLOR {
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+
+  &__buttons {
+    margin-top: 10px;
+    label > input{ /* HIDE RADIO */
+      visibility: hidden; /* Makes input not-clickable */
+      position: absolute; /* Remove input from document flow */
+    }
+    label > input + img{ /* IMAGE STYLES */
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 5px;
+    }
+    label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+      border:2px solid $blue;
+    }
+
+    .buttons__light-blue img {
+      width: 56px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .buttons__pink img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__size {
+    margin-top: 11px;
+    span {
+      font-family: 'PT Root UI Bold';
+      color: $blue;
+    }
+    span.SIZE {
+      font-family: 'PT Root UI Light';
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+  &__size-selectors {
+    margin-top: 10px;
+    button {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border: none;
+    }
+    button:last-child {
+        margin-right: 0;
+    }
+    button:checked {
+      background: $blue;
+      border: 2px solid $blue;
     }
   }
 }
