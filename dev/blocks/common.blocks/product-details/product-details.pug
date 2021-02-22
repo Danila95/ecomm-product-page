@@ -15,7 +15,7 @@
         span.COLOR color:&nbsp;
         span Light Blue
     .product-details__buttons
-        form(class="buttons")
+        form(class="buttons__checkbox")
             label(class="buttons__light-blue")
                 input(type="checkbox" name="field-shirt-light-blue")
                 img(src="./img/shirt_light-blue_(small).png")
@@ -26,8 +26,34 @@
         span.SIZE size:&nbsp;
         span M
     .product-details__size-selectors
-        button XS
-        button S
-        button M
-        button L
-        button XL
+        form(class="size-selectors__checkbox")
+            label(class="checkbox__input")
+                input(type="checkbox")
+                span XS
+            label(class="checkbox__input")
+                input(type="checkbox")
+                span &nbsp;S
+            label(class="checkbox__input")
+                input(type="checkbox")
+                span &nbsp;M
+            label(class="checkbox__input")
+                input(type="checkbox")
+                span &nbsp;L
+            label(class="checkbox__input")
+                input(type="checkbox")
+                span XL
+    .product-details__additional-functions
+        .additional-functions__additional-information
+            a(href="#") Size guide
+            a(href="#") Shipping
+        .additional-functions__about-this-product
+            a(href="#") Ask about this product
+    .product-details__cart-buttons
+        .cart-buttons__count-buttons
+            img(src="")
+            input(type="number")
+            img(src="")
+        .cart-buttons__add-to-cart
+            .button-add-to-cart
+                img( src="./img/icons/bag_white.svg" alt="")
+                span add to cart
