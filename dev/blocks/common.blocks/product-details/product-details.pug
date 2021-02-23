@@ -48,12 +48,12 @@
             a(href="#") Shipping
         .additional-functions__about-this-product
             a(href="#") Ask about this product
-    .product-details__cart-buttons
+    form.product-details__cart-buttons
         .cart-buttons__count-buttons
             img(src="")
             input(type="number")
             img(src="")
         .cart-buttons__add-to-cart
-            .button-add-to-cart
-                img( src="./img/icons/bag_white.svg" alt="")
-                span add to cart
+            label
+                input(type="submit" value="add to cart")
+                img( src="./img/icons/bag_2.svg" alt="")
