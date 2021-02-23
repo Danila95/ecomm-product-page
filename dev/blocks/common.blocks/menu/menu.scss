@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  // координаты фиксированного menu
+  position: fixed; /* Фиксированное положение */
+  background: white; /* Цвет фона */
+  z-index: 2;
 
   &__logo {
     position: relative;
@@ -25,7 +29,7 @@
 
   &__navigation {
     margin-top: 20px;
-    width: 18%;
+    width: 24%;
 
     font-family: 'PT Root UI Light';
     text-transform: uppercase;
