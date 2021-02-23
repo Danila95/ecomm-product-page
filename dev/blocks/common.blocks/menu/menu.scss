@@ -41,8 +41,10 @@
   &__buttons {
     display: flex;
     position: relative;
-    right: 3%;
-    width: 8%;
+    right: 9.5%;
+    margin-top: 16px;
+    width: 24px;
+    height: 24px;
 
     img:nth-child(even) {
       margin: 0 16px 0 16px;

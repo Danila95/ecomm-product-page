@@ -160,15 +160,52 @@
     margin-top: 30px;
 
     .cart-buttons__count-buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
 
+      //(убираем дефолтные кнопки)
+      //Для Chrome
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+      //Для Firefox
+      input[type=number]{
+        -moz-appearance: textfield;
+      }
+
+      input {
+        width: 32px;
+        border: none;
+        background-color: $grey;
+        text-align: center;
+      }
+
+      .count-buttons__arrow-minus {
+        background: url('./img/icons/minus.png') no-repeat center;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: $grey;
+        cursor: pointer;
+      }
+      .count-buttons__arrow-plus {
+        background: url('./img/icons/plus.png') no-repeat center;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: $grey;
+        cursor: pointer;
+      }
     }
 
     .cart-buttons__add-to-cart {
-      //input {
-      //  background-image: url('./img/icons/bag_white.svg');
-      //}
       input[type="submit"] {
-        background: url('./img/icons/bag_2.svg') no-repeat center left;
+        background: url('./img/icons/bag_white.png') no-repeat 33% center;
         border: 2px solid $blue;
         background-color: $blue;
         cursor: pointer;
@@ -177,22 +214,8 @@
         color: white;
         width: 380px;
         height: 50px;
-        margin-right: 40px;
+        margin-right: 30px;
       }
-      //.button-add-to-cart {
-      //  display: flex;
-      //  width: 215px;
-      //  height: 50px;
-      //  font-family: 'PT Root UI Light';
-      //  background: $blue;
-      //  border: 2px solid $blue;
-      //  border-radius: 5px;
-      //  cursor: pointer;
-      //  color: white;
-      //  text-transform: uppercase;
-      //  text-align: center;
-      //}
     }
   }
-
 }

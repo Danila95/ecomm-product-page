@@ -50,10 +50,9 @@
             a(href="#") Ask about this product
     form.product-details__cart-buttons
         .cart-buttons__count-buttons
-            img(src="")
-            input(type="number")
-            img(src="")
+            button(class="count-buttons__arrow-minus")
+            input(type="number" class="count-buttons_input-num" value="1")
+            button(class="count-buttons__arrow-plus")
         .cart-buttons__add-to-cart
             label
                 input(type="submit" value="add to cart")
-                img( src="./img/icons/bag_2.svg" alt="")
