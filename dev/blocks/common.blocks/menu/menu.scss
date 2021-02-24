@@ -40,6 +40,9 @@
       text-decoration: none;
       color: $black;
     }
+    a:hover {
+      color: $blue;
+    }
   }
 
   &__buttons {
@@ -49,8 +52,19 @@
     margin-top: 16px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 
-    img:nth-child(even) {
+    .bag-icon-black:hover {
+      opacity: 0;
+    }
+
+    .bag-icon-hover-active {
+      position: absolute;
+      left: 40px;
+      z-index: -1;
+    }
+
+    div:nth-child(even) {
       margin: 0 16px 0 16px;
     }
   }
