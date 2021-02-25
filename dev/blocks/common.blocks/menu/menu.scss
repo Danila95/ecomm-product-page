@@ -6,6 +6,7 @@
   position: fixed; /* Фиксированное положение */
   background: white; /* Цвет фона */
   z-index: 2;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
 
   &__logo {
     position: relative;

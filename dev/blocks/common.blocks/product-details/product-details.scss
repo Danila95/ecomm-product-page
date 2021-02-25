@@ -207,6 +207,9 @@
         background-color: $grey;
         cursor: pointer;
       }
+      .count-buttons__arrow-minus:hover {
+          background-color: $grey-2;
+      }
       .count-buttons__arrow-plus {
         background: url('./img/icons/plus.png') no-repeat center;
         width: 50px;
@@ -214,6 +217,9 @@
         border: none;
         background-color: $grey;
         cursor: pointer;
+      }
+      .count-buttons__arrow-plus:hover {
+        background-color: $grey-2;
       }
     }
 
