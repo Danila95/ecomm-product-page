@@ -8,39 +8,39 @@
     .product-details__name-product
         h1 Slim Fit Cotton Oxford Shirt
     .product-details__price
-        h1 $200.00
+        h1(id="price") $200.00
     .product-details__tax
         | Tax included
     .product-details__color
         span.COLOR color:&nbsp;
-        span Light Blue
+        span(id='color-light-blue') Light Blue
     .product-details__buttons
         form(class="buttons__checkbox")
             label(class="buttons__light-blue")
-                input(type="checkbox" id="field-shirt-light-blue")
+                input(type="checkbox" checked)
                 img(src="./img/shirt_light-blue_(small).png")
             label(class="buttons__pink")
-                input(type="checkbox" id="field-shirt-pink")
+                input(type="checkbox")
                 img(src="./img/shirt_pink_(small).png")
     .product-details__size
         span.SIZE size:&nbsp;
-        span M
+        span(id="size-M") M
     .product-details__size-selectors
         form(class="size-selectors__checkbox")
-            label(class="checkbox__input")
-                input(type="checkbox")
+            label(class="XS")
+                input(type="radio")
                 span XS
-            label(class="checkbox__input")
-                input(type="checkbox")
+            label(class="S")
+                input(type="radio")
                 span &nbsp;S
-            label(class="checkbox__input")
-                input(type="checkbox")
+            label(class="M")
+                input(type="radio" checked)
                 span &nbsp;M
-            label(class="checkbox__input")
-                input(type="checkbox")
+            label(class="L")
+                input(type="radio")
                 span &nbsp;L
-            label(class="checkbox__input")
-                input(type="checkbox")
+            label(class="XL")
+                input(type="radio")
                 span XL
     .product-details__additional-functions
         .additional-functions__additional-information
