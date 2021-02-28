@@ -1,6 +1,7 @@
 import * as $ from 'jquery';
 import './style.scss';
 import './blocks/common.blocks/product-details/quantity-products'
+import './blocks/common.blocks/slider/slider'
 
 let Price = {
     lightBlue: {
@@ -34,9 +35,9 @@ const getNewPrice = function() {
     const sizeId = getSizeId();
     const h1 = $('#price');
     // условия при нажатии на color-light-blue
-    if ( colorId === 'color-light-blue' && sizeId === 'size-XS'){
+    if ( colorId === 'color-light-blue' && sizeId === 'size-XS')
         $(h1).html('$' + Price.lightBlue.XS.toFixed(2));
-    } else if (colorId === 'color-light-blue' && sizeId === 'size-S')
+    else if (colorId === 'color-light-blue' && sizeId === 'size-S')
         $(h1).html('$' + Price.lightBlue.S.toFixed(2));
     else if (colorId === 'color-light-blue' && sizeId === 'size-M')
         $(h1).html('$' + Price.lightBlue.M.toFixed(2));
@@ -55,7 +56,6 @@ const getNewPrice = function() {
         $(h1).html('$' + Price.Pink.L.toFixed(2));
     else if (colorId === 'color-pink' && sizeId === 'size-XL')
         $(h1).html('$' + Price.Pink.XL.toFixed(2));
-
 };
 
 // переключение цвета товара
