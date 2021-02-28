@@ -71,7 +71,6 @@ $('.buttons__checkbox').click(function(e){
 $('.buttons__light-blue').click(function () {
     const span = $('.product-details__color').children().next('span');
     $(span).replaceWith("<span id=\"color-light-blue\">Light Blue</span>");
-    console.log($(span).replaceWith("<span id=\"color-light-blue\">Light Blue</span>"));
 });
 
 $('.buttons__pink').click(function () {
@@ -114,4 +113,32 @@ $('.L').click(function () {
 $('.XL').click(function () {
     const span = $('.product-details__size').children().next('span');
     $(span).replaceWith("<span id=\"size-XL\">XL</span>");
+});
+
+// смена картинок в слайдере
+$('.buttons__pink').click(function(){
+    $('#slide-img1').attr('src', 'img/shirt_pink_big.png');
+    $('#slide-img2').attr('src', 'img/shirt_pink_front_increase.png');
+    $('#slide-img3').attr('src', 'img/shirt_pink_front.png');
+    $('#slide-img4').attr('src', 'img/shirt_pink_back_increase.png');
+
+    $('.slider__other-img').replaceWith("<div class='slider__other-img'>" +
+        "<img src='img/shirt_pink_big.png' id='other-img1' alt>" +
+        "<img src='img/shirt_pink_front_increase.png' id='other-img2' alt>" +
+        "<img src='img/shirt_pink_front.png' id='other-img3' alt>" +
+        "<img src='img/shirt_pink_back_increase.png' id='other-img4' alt>" +
+        "</div>");
+});
+$('.buttons__light-blue').click(function(){
+    $('#slide-img1').attr('src', 'img/shirt_light-blue_big.png');
+    $('#slide-img2').attr('src', 'img/shirt_light-blue_increase.png');
+    $('#slide-img3').attr('src', 'img/shirt_light-blue_front.png');
+    $('#slide-img4').attr('src', 'img/shirt_light-blue_back.png');
+
+    $('.slider__other-img').replaceWith("<div class='slider__other-img'>" +
+        "<img src='img/shirt_light-blue_big.png' id='other-img1' alt>" +
+        "<img src='img/shirt_light-blue_increase.png' id='other-img2' alt>" +
+        "<img src='img/shirt_light-blue_front.png' id='other-img3' alt>" +
+        "<img src='img/shirt_light-blue_back.png' id='other-img4' alt>" +
+        "</div>");
 });

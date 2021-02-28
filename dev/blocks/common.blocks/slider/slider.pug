@@ -1,16 +1,20 @@
 .slider__other-img
-    img(src="./img/shirt_light-blue_big.png" alt="")
-    img(src="./img/shirt_light-blue_increase.png" alt="")
-    img(src="./img/shirt_light-blue_front.png" alt="")
-    img(src="./img/shirt_light-blue_back.png" alt="")
+    img(src="./img/shirt_light-blue_big.png" id="other-img1" alt="" class="slider_selected")
+    img(src="./img/shirt_light-blue_increase.png" id="other-img2" alt="")
+    img(src="./img/shirt_light-blue_front.png" id="other-img3" alt="")
+    img(src="./img/shirt_light-blue_back.png" id="other-img4" alt="")
 .slider
     .slider__carusel(data-slider)
         .nav
-            button.prev(data-slider-nav="prev")
+            button.prev(data-slider-nav="prev" disabled)
             button.next(data-slider-nav="next")
             button.increase
         .wrap(data-slider-wrap)
-            .slide(style="background-image: url(img/shirt_light-blue_big.png);")
-            .slide(style="background-image: url(img/shirt_light-blue_increase.png);")
-            .slide(style="background-image: url(img/shirt_light-blue_front.png);")
-            .slide(style="background-image: url(img/shirt_light-blue_back.png);")
+            .slide
+                img(src="img/shirt_light-blue_big.png" id="slide-img1" alt)
+            .slide
+                img(src="img/shirt_light-blue_increase.png" id="slide-img2" alt)
+            .slide
+                img(src="img/shirt_light-blue_front.png" id="slide-img3" alt)
+            .slide
+                img(src="img/shirt_light-blue_back.png" id="slide-img4" alt)

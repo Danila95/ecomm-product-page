@@ -23,6 +23,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    img {
+      width: 480px;
+      height: 600px;
+    }
   }
 
   &__other-img {
@@ -40,6 +45,10 @@
     img:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &_selected {
+    opacity: 0.4;
   }
 
   &__carusel {
