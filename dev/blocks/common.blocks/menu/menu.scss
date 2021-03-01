@@ -64,9 +64,26 @@
       left: 40px;
       z-index: -1;
     }
-
-    div:nth-child(even) {
+    .buttons__bag-icon {
       margin: 0 16px 0 16px;
     }
+
+    .buttons_notification {
+      display: none;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 58px;
+      top: -11px;
+      background: $blue;
+      border-radius: 10px;
+      color: white;
+      font-family: 'PT Root UI Light';
+      font-size: 11px;
+      line-height: 16px;
+      text-align: center;
+
+    }
+
   }
 }

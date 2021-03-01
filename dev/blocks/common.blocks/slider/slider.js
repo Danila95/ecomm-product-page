@@ -45,8 +45,8 @@ $(document).ready(function() {
             $('#other-img2').attr('class','');
             $('#other-img1').attr('class','slider_selected');
         }
-        console.log('oldCurrent: ' + oldCurrent);
-        console.log('current: ' + current);
+        // console.log('oldCurrent: ' + oldCurrent);
+        // console.log('current: ' + current);
 
         $slider.attr("data-slider", current);
         $sliderWrap.css("left",current*-100+"%");
