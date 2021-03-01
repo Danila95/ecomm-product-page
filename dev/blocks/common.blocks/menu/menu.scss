@@ -58,6 +58,9 @@
     .bag-icon-black:hover {
       opacity: 0;
     }
+    .bag-icon-black-unvisible {
+      opacity: 0;
+    }
 
     .bag-icon-hover-active {
       position: absolute;
@@ -84,6 +87,45 @@
       text-align: center;
 
     }
+  }
 
+  &__fast-cart {
+    display: none;
+    width: 235px;
+    height: 160px;
+    z-index: 1;
+    position: absolute;
+    top: 56px;
+    right: 1px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
+
+    &_visible {
+      display: block;
+      flex-direction: column;
+    }
+
+    .fast-cart__empty {
+      display: flex;
+
+      img {
+        position: absolute;
+        left: 114px;
+        top: 36px;
+      }
+
+      span {
+        position: absolute;
+        left: 65px;
+        top: 104px;
+        color: $grey-2;
+        font-family: "PT Root UI Light";
+        font-size: 14px;
+        line-height: 20px;
+
+      }
+
+    }
   }
 }

@@ -5,14 +5,12 @@ let $quantityNum = $(".count-buttons_input-num");
 // отключение отправки формы
 $('.product-details__cart-buttons').submit(function (e) {
     e.preventDefault(); // e = event
-    let notif = $('#notification');
-    let allSum = + $quantityNum.val();
+    let notif = $('#notification'),
+        fastCart = $('#fast-cart'),
+        allSum = + $quantityNum.val();
     console.log('allSum:' + allSum);
 
-
-    // if ($quantityNum.val() === 0)
-    //     notif.attr('display','none');
-
+    fastCart.replaceWith('<div id="fast-cart">Test</div>');
     notif.replaceWith('<span class="buttons_notification"  style="display: block" id="notification">' +
         allSum +
         '</span>');

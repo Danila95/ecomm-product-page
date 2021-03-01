@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 import './style.scss';
-import './blocks/common.blocks/product-details/quantity-products'
+// import './blocks/common.blocks/product-details/quantity-products'
 import './blocks/common.blocks/slider/slider'
 
 let Price = {
@@ -141,4 +141,39 @@ $('.buttons__light-blue').click(function(){
         "<img src='img/shirt_light-blue_front.png' id='other-img3' alt>" +
         "<img src='img/shirt_light-blue_back.png' id='other-img4' alt>" +
         "</div>");
+});
+
+//quantity-products
+let $quantityNum = $(".count-buttons_input-num");
+// отключение отправки формы
+$('.product-details__cart-buttons').submit(function (e) {
+    e.preventDefault(); // e = event
+    let notif = $('#notification'),
+        fastCart = $('#fast-cart'),
+        allSum = + $quantityNum.val();
+    console.log('allSum:' + allSum);
+
+    fastCart.replaceWith('<div id="fast-cart" class="menu__fast-cart">Test</div>');
+    notif.replaceWith('<span class="buttons_notification"  style="display: block" id="notification">' +
+        allSum +
+        '</span>');
+});
+
+$(".count-buttons__arrow-plus").click(function (e) {
+    e.preventDefault(); // e = event
+    $quantityNum.val(+$quantityNum.val() + 1);
+});
+
+$(".count-buttons__arrow-minus").click(function (e) {
+    e.preventDefault(); // e = event
+    if ($quantityNum.val() > 1) {
+        $quantityNum.val(+$quantityNum.val() - 1);
+    }
+});
+
+
+// функция открытия быстрой корзины
+$('#bag-icon').click(function() {
+    $('#fast-cart').toggleClass('menu__fast-cart_visible');
+    $('.bag-icon-black').toggleClass('bag-icon-black-unvisible');
 });
