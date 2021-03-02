@@ -143,6 +143,17 @@ $('.buttons__light-blue').click(function(){
         "</div>");
 });
 
+const addProduct = function() {
+    let nameProduct = $('.product-details__name-product').text();
+    // let html = $.parseHTML(nameProduct);
+    // $.each(html, function (i, el) {
+    //     if (el.nodeName === 'h1')
+    //         $('.content__product').append(el);
+    // });
+    return nameProduct;
+
+};
+addProduct();
 //quantity-products
 let $quantityNum = $(".count-buttons_input-num");
 // отключение отправки формы
@@ -153,7 +164,23 @@ $('.product-details__cart-buttons').submit(function (e) {
         allSum = + $quantityNum.val();
     console.log('allSum:' + allSum);
 
-    fastCart.replaceWith('<div id="fast-cart" class="menu__fast-cart">Test</div>');
+    fastCart.replaceWith('' +
+        '<div id="fast-cart" class="menu__fast-cart">' +
+            '<div class="fast-cart__content">' +
+                '<div class="content__product">'+addProduct()+'</div>' +
+                '<hr class="content__separator">' +
+                '<div class="content__total">' +
+                    '<div class="total">' +
+                        '<div class="total__title">total:</div>' +
+                        '<div class="total__price">$</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="content__buttons">' +
+                    '<input type="submit" class="buttons__proceed-to-checkout" value="proceed to checkout">' +
+                    '<a href="#" class="buttons__view-cart">view cart</a>' +
+                '</div>' +
+            '</div>' +
+        '</div>');
     notif.replaceWith('<span class="buttons_notification"  style="display: block" id="notification">' +
         allSum +
         '</span>');

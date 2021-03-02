@@ -54,6 +54,7 @@
       color: $blue;
     }
     span.COLOR {
+      font-family: 'PT Root UI Light';
       text-transform: uppercase;
       color: $black;
     }
@@ -252,6 +253,14 @@
       }
       input:focus {
         outline: none;
+      }
+      a {
+        margin: 8px 12px 8px 12px;
+        text-decoration: none;
+        color: $black;
+      }
+      a:hover {
+        color: $blue;
       }
     }
   }

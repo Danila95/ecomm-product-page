@@ -92,7 +92,7 @@
   &__fast-cart {
     display: none;
     width: 235px;
-    height: 160px;
+    height: 200px;
     z-index: 1;
     position: absolute;
     top: 56px;
@@ -111,21 +111,86 @@
 
       img {
         position: absolute;
-        left: 114px;
-        top: 36px;
+        left: 96px;
+        top: 61px;
       }
 
       span {
         position: absolute;
-        left: 65px;
-        top: 104px;
+        left: 49px;
+        top: 119px;
         color: $grey-2;
         font-family: "PT Root UI Light";
         font-size: 14px;
         line-height: 20px;
 
       }
+    }
+    .fast-cart__content {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+    }
+    .content{
+      &__product {
 
+      }
+
+      &__separator {
+        width: 100%;
+      }
+
+      &__total {
+        display: flex;
+        flex-direction: column;
+        .total {
+          display: flex;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+      }
+
+      &__buttons {
+        margin-top: 20px;
+        input[type="submit"] {
+          border: 2px solid $blue;
+          background-color: $blue;
+          cursor: pointer;
+          border-radius: 5px;
+          text-transform: uppercase;
+          color: white;
+          width: 200px;
+          height: 40px;
+          font-family: "PT Root UI Medium";
+          font-size: 14px;
+          margin-bottom: 16px;
+        }
+        input:hover {
+          background-color: $blue-2;
+          border-color: $blue-2;
+        }
+        input:active {
+          outline: none;
+          background-color: $blue-2;
+          border-color: $blue-2;
+        }
+        input:focus {
+          outline: none;
+        }
+
+        a {
+          font-family: 'PT Root UI Light';
+          text-transform: uppercase;
+          font-size: 14px;
+          margin-left: 68px;
+          text-decoration: none;
+          color: $blue;
+        }
+        a:hover {
+          color: $black;
+        }
+      }
     }
   }
 }
